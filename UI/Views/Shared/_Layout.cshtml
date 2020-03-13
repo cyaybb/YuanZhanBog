@@ -3,8 +3,50 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
 </head>
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <a class="navbar-left" href="#">
+                <img alt="Logo" src="~/images/logo-big.ico">
+            </a>
+            <p class="navbar-text">
+                <span style="font-size:18px; font-weight:600;">一起帮 ·</span>
+                网络互助平台
+            </p>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav ">
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-question-sign"></span> 求助</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-eye-open"></span> 督促</a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="glyphicon glyphicon-list-alt"></span> 文章</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-user"></span> 未登录 <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
     @RenderBody()
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>
