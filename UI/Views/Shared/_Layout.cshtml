@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/csss/_Layout.css" rel="stylesheet" />
 </head>
 <body>
     <nav class="navbar navbar-default">
@@ -66,7 +67,30 @@
             </div>
         </div>
     </nav>
-    @RenderBody()
+    <div class="container" cy-RenderBoder>
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="container">
+            <hr />
+            <div class=" ">
+                <ul class="nav nav-pills col-lg-5" cy-footer-a>
+                    <li role="presentation"><a href="#"> 关于我们</a></li>
+                    <li role="presentation"><a href="#">常见问题</a></li>
+                    <li role="presentation"><a href="#">意见建议</a></li>
+                    <li role="presentation"><a href="#">历史通知</a></li>
+                    <li role="presentation"><a href="#">友情捐赠方</a></li>
+                    <li role="presentation"><a href="#">融资2018</a></li>
+                </ul>
+            </div>
+            <div class="row col-lg-12">
+                友情链接：
+            </div>
+            <div class=" pull-right">
+                <a href="#">渝ICP备18007191号（备案）</a>© 2020 - 首顾科技
+            </div>
+        </div>
+    </footer>
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>

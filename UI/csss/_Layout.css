@@ -1,0 +1,11 @@
+﻿[cy-footer-a] li a {
+    padding: 0 2px;
+}
+
+footer {
+    padding-bottom:50px;
+}
+
+[cy-RenderBoder] {
+    min-height: 400px;
+}
