@@ -1,0 +1,10 @@
+﻿
+.yellow-highlight {
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    border: 2px dashed #eee;
+    border-radius: 4px 5px;
+    background-color: #ffffe0;
+}

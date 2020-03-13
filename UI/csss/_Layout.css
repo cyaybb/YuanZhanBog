@@ -9,3 +9,9 @@ footer {
 [cy-RenderBoder] {
     min-height: 400px;
 }
+
+[cy-top-message] {
+    background-color: #eee;
+    margin-top: -17px;
+    margin-bottom: 10px;
+}
