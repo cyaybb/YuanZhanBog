@@ -1,56 +1,61 @@
 ﻿
-    <link href="~/csss/RegisterNew.css" rel="stylesheet" />
-<div class="container">
-    
-    <h2><span class="glyphicon glyphicon-registration-mark"></span>注册</h2>
-    <hr />
-    <div class="row col-lg-4 ">
-        <div class="tab-content">
-            <div role="tabpanel" class="tab-pane  active" id="password">
-                <form asp-page="On" method="post">
-                    <section class="yellow-highlight">
-                        <div class="text-right" style="padding-top:10px;text-align: right;">
-                            <a href="#"><span class="glyphicon glyphicon-question-sign"></span> 为什么需要邀请</a>
-                        </div>
-                        <div class="form-group ">
-                            <label for="inviter">邀请人:(*必填，<a href="#">没有邀请人</a>)</label>
-                            <input type="text" class="form-control" id="inviter" name="inviter" placeholder="他的用户名，模糊查询只能充头开始">
-                        </div>
-                        <div class="form-group ">
-                            <label for="inviterCode">邀请码:(*必填)</label>
-                            <input type="text" class="form-control" name="inviterCode" placeholder="4位数字">
-                        </div>
-                    </section>
-                    <div class="form-group ">
-                        <label for="userName">用户名:(*必填)</label>
-                        <input type="text" class="form-control" id="userName" name="name" placeholder="登录用户名，可修改，不能重复">
-                    </div>
-                    <div class="form-group ">
-                        <label for="password">密码:(*必填)</label>
-                        <input type="text" class="form-control" name="password" placeholder="不少于4个字符">
-                    </div>
-                    <div class="form-group ">
-                        <label for="validatePassword">验证密码:(*必填)</label>
-                        <input type="text" class="form-control" name="validatePassword" placeholder="和密码相同">
-                    </div>
-                    <div class="form-group ">
-                        <label for="verificationCode">验证码:(*必填)</label><br />
-                        <input style="width:100px;display:inline;" type="text" class="form-control " id="verificationCode" placeholder="">
-                        <p style="display:inline"> 点击输入框显示</p>
-                    </div>
-                    <div>
-                        <button style="display:inline-block" type="submit" class="btn btn-primary">提交</button>
-                        <button style="display:inline-block" type="reset" class="btn btn-default">重置</button>
+<link href="~/csss/RegisterNew.css" rel="stylesheet" />
 
-                        <div style="display:inline;margin-left: 15px;" class="checkbox">
-                            <span class="pull-right btn">
-                                <a style="margin-left:10px;" href="#">
-                                    <span class="glyphicon glyphicon-log-in"></span> 登录
-                                </a>
-                            </span>
+<div class="container body-content">
+    <div class="container return-prepage pull-right">
+        <a href="#"><span class="glyphicon glyphicon-share-alt"></span>返回</a>
+    </div>
+    <div class="content">
+        <h2><span class="glyphicon glyphicon-registration-mark "></span> 注册</h2>
+        <hr />
+        <div class="row col-lg-4 ">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane  active" id="password">
+                    <form asp-page="On" method="post">
+                        <section class="yellow-highlight">
+                            <div class="text-right" style="padding-top:10px;text-align: right;">
+                                <a href="#"><span class="glyphicon glyphicon-question-sign"></span> 为什么需要邀请</a>
+                            </div>
+                            <div class="form-group ">
+                                <label for="inviter">邀请人:(*必填，<a href="#">没有邀请人</a>)</label>
+                                <input type="text" class="form-control" id="inviter" name="inviter" placeholder="他的用户名，模糊查询只能充头开始">
+                            </div>
+                            <div class="form-group ">
+                                <label for="inviterCode">邀请码:(*必填)</label>
+                                <input type="text" class="form-control" name="inviterCode" placeholder="4位数字">
+                            </div>
+                        </section>
+                        <div class="form-group ">
+                            <label for="userName">用户名:(*必填)</label>
+                            <input type="text" class="form-control" id="userName" name="name" placeholder="登录用户名，可修改，不能重复">
                         </div>
-                    </div>
-                </form>
+                        <div class="form-group ">
+                            <label for="password">密码:(*必填)</label>
+                            <input type="text" class="form-control" name="password" placeholder="不少于4个字符">
+                        </div>
+                        <div class="form-group ">
+                            <label for="validatePassword">验证密码:(*必填)</label>
+                            <input type="text" class="form-control" name="validatePassword" placeholder="和密码相同">
+                        </div>
+                        <div class="form-group ">
+                            <label for="verificationCode">验证码:(*必填)</label><br />
+                            <input style="width:100px;display:inline;" type="text" class="form-control " id="verificationCode" placeholder="">
+                            <p style="display:inline"> 点击输入框显示</p>
+                        </div>
+                        <div>
+                            <button style="display:inline-block" type="submit" class="btn btn-primary">提交</button>
+                            <button style="display:inline-block" type="reset" class="btn btn-default">重置</button>
+
+                            <div style="display:inline;margin-left: 15px;" class="checkbox">
+                                <span class="pull-right btn">
+                                    <a style="margin-left:10px;" href="#">
+                                        <span class="glyphicon glyphicon-log-in"></span> 登录
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

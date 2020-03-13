@@ -8,3 +8,22 @@
     border-radius: 4px 5px;
     background-color: #ffffe0;
 }
+
+.return-prepage {
+    background-color: #7fffd4;
+    border-bottom-left-radius: 6px;
+    width: 75px;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+    .return-prepage a {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5px;
+    }
+
+.content {
+    clear: both;
+}
