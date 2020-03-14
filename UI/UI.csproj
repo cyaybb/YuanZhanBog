@@ -184,6 +184,24 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SRV\MockSerice\MockSerice.csproj">
+      <Project>{c076fe0a-9f1d-499a-9a31-6c79cdad9e34}</Project>
+      <Name>MockSerice</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SRV\ProdService\ProdService.csproj">
+      <Project>{d7f510ac-8427-4643-9f89-9cead3a40378}</Project>
+      <Name>ProdService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SRV\ServiceInterface\ServiceInterface.csproj">
+      <Project>{fb9205c7-f100-442b-93d6-53f043899c0d}</Project>
+      <Name>ServiceInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SRV\ViewModel\ViewModel.csproj">
+      <Project>{f6f65c7e-78b6-4683-a6ee-b7421d137add}</Project>
+      <Name>ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
