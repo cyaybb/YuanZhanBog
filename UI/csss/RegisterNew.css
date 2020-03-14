@@ -27,3 +27,19 @@
 .content {
     clear: both;
 }
+
+.text-bold {
+font-weight:600;
+}
+
+.water {
+color:blue;
+}
+
+.creadit {
+    color: rgba(203,180,26,1);
+}
+
+.bead {
+    color: #9acd32;
+}
