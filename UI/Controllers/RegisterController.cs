@@ -17,6 +17,10 @@ namespace UI.Controllers
         [HttpPost]
         public ActionResult New(NewModel newModel)
         {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
             return View();
         }
     }
