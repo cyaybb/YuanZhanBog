@@ -43,3 +43,7 @@ color:blue;
 .bead {
     color: #9acd32;
 }
+
+.input-validation-error {
+    border: 1px solid #b94a48;
+}
