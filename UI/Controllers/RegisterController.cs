@@ -26,12 +26,17 @@ namespace UI.Controllers
             return View();
         }
 
-        public ActionResult ValidationCode()
+        public ActionResult FrontEndValidationCode()
         {
             HPValidationCode hPValidationCode = new HPValidationCode();
            byte[] imgByte =hPValidationCode.GetImgByte();
             HttpContext.Session["ValidationCodeString"] = hPValidationCode.verificationCode;
             return File(imgByte, "image/png");
+        }
+        public ActionResult AfterEndValidationCode(string VerificationCode)
+        {
+            string code=HttpContext.Session["ValidationCodeString"].ToString().ToLower();
+            return Json(VerificationCode.ToLower() == code,JsonRequestBehavior.AllowGet);
         }
     }
 }

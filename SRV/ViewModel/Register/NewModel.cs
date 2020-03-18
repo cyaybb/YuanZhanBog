@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using ViewModel.Verifications;
 
 namespace ViewModel.Register
@@ -32,6 +33,7 @@ namespace ViewModel.Register
         [Required(ErrorMessage = "*验证码不能为空")]
         [StringLength(4, ErrorMessage = "*验证码的长度只能等于4",MinimumLength =4)]
         [CheckValidateCode(ErrorMessage ="*验证码错误")]
+        [Remote("AfterEndValidationCode", "Register",ErrorMessage ="*验证码错误",HttpMethod ="Get")]
         public string VerificationCode { get; set; }
     }
 }

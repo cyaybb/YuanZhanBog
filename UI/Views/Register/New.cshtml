@@ -47,7 +47,7 @@
                             @Html.TextBoxFor(m => m.VerificationCode, new { @class = "form-control",cy_click_validatecode="", style = "width:100px;display:inline;" })
                             <p style="display:inline;" cy-click-contentHidden> 点击输入框显示</p>
                             <div style="display:inline;visibility:hidden" cy-click-contentShow>
-                                <img src="/Register/ValidationCode" cy-validationCodeImg alt="验证码" />
+                                <img src="/Register/FrontEndValidationCode" cy-validationCodeImg alt="验证码" />
                                 <a href="#" cy-click-changImg>换一个</a>
                             </div>
                             @Html.ValidationMessageFor(r => r.VerificationCode, "", new { style = "color:#b94a48;display:block" })
