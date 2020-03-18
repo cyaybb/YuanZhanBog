@@ -30,7 +30,7 @@ namespace UI.Controllers
         {
             HPValidationCode hPValidationCode = new HPValidationCode();
            byte[] imgByte =hPValidationCode.GetImgByte();
-            HttpContext.Session["ValidationCodeString"] = hPValidationCode.GetValidateCode();
+            HttpContext.Session["ValidationCodeString"] = hPValidationCode.verificationCode;
             return File(imgByte, "image/png");
         }
     }

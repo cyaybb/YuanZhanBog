@@ -17,7 +17,7 @@ namespace UI.Helper
         Graphics graphics;
         Random random = new Random();
         int sum;
-        string verificationCode = "";
+        public string verificationCode = "";
         public byte[] GetImgByte()
         {
             verificationCode = GetValidateCode();
