@@ -20,7 +20,7 @@ namespace UI.Helper
         string verificationCode = "";
         public byte[] GetImgByte()
         {
-            verificationCode = GetRandomText();
+            verificationCode = GetValidateCode();
             //先生成位图
             image = GetBitmap();
             //生成画线的次数
@@ -46,7 +46,7 @@ namespace UI.Helper
             return image;
 
         }
-        public string GetRandomText()
+        public string GetValidateCode()
         {
             return verificationCode = Encoding.ASCII.GetString(
                         new byte[] {
