@@ -1,12 +1,15 @@
 ﻿
-document.getElementsByClassName('cy-click-validateCode')[0]
-    .onclick = function show() {
-        document.getElementsByClassName('cy-click-contentHidden')[0]
-            .style.display = 'none';
-        document.getElementsByClassName('cy-click-contentShow')[0]
-            .style.visibility = '';
-    }
+//点击输入框出现验证码
+$(document).ready(function () {
+    $('[cy-click-validatecode]').on('click', function () {
+        $('[cy-click-contenthidden]').css('display', 'none');
+        $('[cy-click-contentshow]').css('visibility', '');
+    })
+})
 
+
+
+//验证码的更换
 $(document).ready(function () {
     $('[cy-click-changImg]').on('click', function (event) {
         event.preventDefault();
