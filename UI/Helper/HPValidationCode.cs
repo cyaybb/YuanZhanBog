@@ -11,7 +11,7 @@ using System.Web;
 
 namespace UI.Helper
 {
-    public class ValidationCode
+    public class HPValidationCode
     {
         Bitmap image;
         Graphics graphics;
@@ -20,17 +20,14 @@ namespace UI.Helper
         string verificationCode = "";
         public byte[] GetImgByte()
         {
-            Thread threadOnText = new Thread(() => verificationCode = GetRandomText());
-            threadOnText.Start();
+            verificationCode = GetRandomText();
             //先生成位图
-            Task<Bitmap> task = Task<Bitmap>.Run(GetBitmap);
-            image = task.Result;
+            image = GetBitmap();
             //生成画线的次数
             //画线
             DrawLine();
             //画点
             DrawPoints();
-            threadOnText.Join();
             ////生成字符串 并 画线
             DrawText();
             MemoryStream stream = new MemoryStream();
@@ -38,18 +35,16 @@ namespace UI.Helper
             return stream.ToArray();
         }
         //生成位图
-        public async Task<Bitmap> GetBitmap()
+        public Bitmap GetBitmap()
         {
             image = new Bitmap(53, 22);
-            return await Task<Bitmap>.Run(
-                () =>
-                {
-                    graphics = Graphics.FromImage(image);
-                    random = new Random();
-                    graphics.Clear(Color.White);
-                    sum = random.Next(1, 6);
-                    return image;
-                });
+
+            graphics = Graphics.FromImage(image);
+            random = new Random();
+            graphics.Clear(Color.White);
+            sum = random.Next(1, 6);
+            return image;
+
         }
         public string GetRandomText()
         {
@@ -70,7 +65,7 @@ namespace UI.Helper
             }
         }
         //画线
-        public async void DrawLine()
+        public void DrawLine()
         {
             Pen pen = new Pen(
                 Color.FromArgb(random.Next(255),
@@ -82,12 +77,7 @@ namespace UI.Helper
             Point y = new Point(
                 random.Next(0, 22),
                 random.Next(0, 22));
-            await Task.Run(
-                () =>
-                {
-                    graphics.DrawLine(pen, x, y);
-                    Console.WriteLine($"in drawLine() current taskId:{Task.CurrentId}");
-                });
+            graphics.DrawLine(pen, x, y);
 
         }
         //画点

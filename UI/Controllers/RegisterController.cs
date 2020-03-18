@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using UI.Helper;
 using ViewModel.Register;
 
 namespace UI.Controllers
 {
-    public class RegisterController:Controller
+    public class RegisterController : Controller
     {
         [HttpGet]
         public ActionResult New()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult New(NewModel newModel)
         {
@@ -22,7 +24,13 @@ namespace UI.Controllers
                 return View();
             }
             return View();
+        }
 
+        public ActionResult ValidationCode()
+        {
+            HPValidationCode hPValidationCode = new HPValidationCode();
+           byte[] imgByte =hPValidationCode.GetImgByte();
+            return File(imgByte, "image/png");
         }
     }
 }
