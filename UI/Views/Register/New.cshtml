@@ -47,10 +47,10 @@
                             @Html.TextBoxFor(m => m.VerificationCode, new { @class = "form-control cy-click-validateCode", style = "width:100px;display:inline;" })
                             <p style="display:inline;" class="cy-click-contentHidden"> 点击输入框显示</p>
                             <div style="display:inline;visibility:hidden" class="cy-click-contentShow">
-                                <img src="一个action的路径" alt="验证码" />
+                                <img src="/Register/ValidationCode" cy-validationCodeImg alt="验证码" />
                                 <a href="#" cy-click-changImg>换一个</a>
                                 @*给a标签添加jq触发事件，然后发送请求到一个action，去执行和调用运行生成验证码，
-                                   然后return一个 fillresult 是一个 img,最后前台img引用这个action的路径*@
+                                    然后return一个 fillresult 是一个 img,最后前台img引用这个action的路径*@
                             </div>
                             @Html.ValidationMessageFor(r => r.VerificationCode, "", new { style = "color:#b94a48;display:block" })
                         </div>
@@ -84,11 +84,11 @@
     </div>
 </div>
 
-<script src="~/Scripts/Register/RegisterNew.js"></script>
+
 <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/Register/RegisterNew.js"></script>
 <script src="~/Scripts/jquery.validate.js"></script>
 <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-
 
 
 
