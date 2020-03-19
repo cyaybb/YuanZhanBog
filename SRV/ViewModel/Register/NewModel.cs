@@ -19,7 +19,8 @@ namespace ViewModel.Register
         public string InviterCode { get; set; }
 
         [Required(ErrorMessage = "*用户名不能为空")]
-        [CheckNameRepeat(ErrorMessage ="*用户名重复")]
+        [CheckNameRepeat(ErrorMessage ="*用户名重复")]//-----------
+        [Remote("CheckNameRepeat","Register",ErrorMessage = "*用户名重复",HttpMethod ="Get")]
         public string UserName { get; set; }
 
         //[MinLength(4,ErrorMessage = "*密码的长度不能小于4，大于20")]

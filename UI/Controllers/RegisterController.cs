@@ -26,6 +26,7 @@ namespace UI.Controllers
             return View();
         }
 
+        //获取验证码
         public ActionResult FrontEndValidationCode()
         {
             HPValidationCode hPValidationCode = new HPValidationCode();
@@ -33,10 +34,16 @@ namespace UI.Controllers
             HttpContext.Session["ValidationCodeString"] = hPValidationCode.verificationCode;
             return File(imgByte, "image/png");
         }
+        //前台Ajax验证 验证码
         public ActionResult AfterEndValidationCode(string VerificationCode)
         {
             string code=HttpContext.Session["ValidationCodeString"].ToString().ToLower();
             return Json(VerificationCode.ToLower() == code,JsonRequestBehavior.AllowGet);
+        }
+        //前台Ajax验证 用户名重复------------
+        public ActionResult CheckNameRepeat(string UserName)
+        {
+            return Json(UserName!="陈百万" , JsonRequestBehavior.AllowGet);
         }
     }
 }
