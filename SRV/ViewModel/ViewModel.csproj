@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Register\NewModel.cs" />
+    <Compile Include="Verifications\CheckNameRepeat.cs" />
     <Compile Include="Verifications\CheckValidateCode.cs" />
   </ItemGroup>
   <ItemGroup>
