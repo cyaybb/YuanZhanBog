@@ -14,13 +14,14 @@ namespace ViewModel.Register
         //[Required(ErrorMessage ="*邀请人不能为空")]
         public string Inviter { get; set; }
 
-        //[Required(ErrorMessage = "*邀请码不能为空")]
-        //[RegularExpression("[0-9]{4}",ErrorMessage = "*邀请码只能是4位数字")]
+        [Required(ErrorMessage = "*邀请码不能为空")]
+        [RegularExpression("[0-9]{4}", ErrorMessage = "*邀请码只能是4位数字")]
+        [CheckInviteCode(ErrorMessage ="*邀请码错误")]
         public string InviterCode { get; set; }
 
-        [Required(ErrorMessage = "*用户名不能为空")]
-        [CheckNameRepeat(ErrorMessage ="*用户名重复")]//-----------
-        [Remote("CheckNameRepeat","Register",ErrorMessage = "*用户名重复",HttpMethod ="Get")]
+        //[Required(ErrorMessage = "*用户名不能为空")]
+        //[CheckNameRepeat(ErrorMessage ="*用户名重复")]//-----------
+        //[Remote("CheckNameRepeat","Register",ErrorMessage = "*用户名重复",HttpMethod ="Get")]
         public string UserName { get; set; }
 
         //[MinLength(4,ErrorMessage = "*密码的长度不能小于4，大于20")]
