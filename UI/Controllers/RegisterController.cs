@@ -23,6 +23,9 @@ namespace UI.Controllers
             {
                 return View();
             }
+            //服务器端的验证用户名重复还是伪代码没有写完
+            //把用户的信息存储到数据库中=》调用service层 的RegisterServie的save方法
+
             return View();
         }
 
