@@ -14,9 +14,8 @@ namespace ViewModel.Register
         //[Required(ErrorMessage ="*邀请人不能为空")]
         public string Inviter { get; set; }
 
-        [Required(ErrorMessage = "*邀请码不能为空")]
-        [RegularExpression("[0-9]{4}", ErrorMessage = "*邀请码只能是4位数字")]
-        [CheckInviteCode(ErrorMessage ="*邀请码错误")]
+        //[Required(ErrorMessage = "*邀请码不能为空")]
+        //[RegularExpression("[0-9]{4}", ErrorMessage = "*邀请码只能是4位数字")]
         public string InviterCode { get; set; }
 
         //[Required(ErrorMessage = "*用户名不能为空")]
