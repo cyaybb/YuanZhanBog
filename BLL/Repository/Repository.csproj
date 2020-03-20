@@ -65,6 +65,10 @@
     <Compile Include="Migrations\202003200745112_annotation.designer.cs">
       <DependentUpon>202003200745112_annotation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003200939399_UserInviteCodeAddUnique.cs" />
+    <Compile Include="Migrations\202003200939399_UserInviteCodeAddUnique.designer.cs">
+      <DependentUpon>202003200939399_UserInviteCodeAddUnique.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -88,6 +92,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003200745112_annotation.resx">
       <DependentUpon>202003200745112_annotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003200939399_UserInviteCodeAddUnique.resx">
+      <DependentUpon>202003200939399_UserInviteCodeAddUnique.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
