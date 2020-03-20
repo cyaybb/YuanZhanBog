@@ -61,6 +61,10 @@
     <Compile Include="Migrations\202003200734077_Add_requied_constraint.designer.cs">
       <DependentUpon>202003200734077_Add_requied_constraint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003200745112_annotation.cs" />
+    <Compile Include="Migrations\202003200745112_annotation.designer.cs">
+      <DependentUpon>202003200745112_annotation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -81,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202003200734077_Add_requied_constraint.resx">
       <DependentUpon>202003200734077_Add_requied_constraint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003200745112_annotation.resx">
+      <DependentUpon>202003200745112_annotation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
