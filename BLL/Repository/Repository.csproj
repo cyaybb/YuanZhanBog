@@ -57,6 +57,10 @@
     <Compile Include="Migrations\202003200347142_User.designer.cs">
       <DependentUpon>202003200347142_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202003200734077_Add_requied_constraint.cs" />
+    <Compile Include="Migrations\202003200734077_Add_requied_constraint.designer.cs">
+      <DependentUpon>202003200734077_Add_requied_constraint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202003200347142_User.resx">
       <DependentUpon>202003200347142_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202003200734077_Add_requied_constraint.resx">
+      <DependentUpon>202003200734077_Add_requied_constraint.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
