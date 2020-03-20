@@ -16,8 +16,11 @@ namespace Repository
         public UserRepository() : base("YuanZhan")
         {
         }
-        public User Save()
+        public User Save(User user)
         {
+            //user.publish();如果User有直接的方法要调用执行一下
+            Users.Add(user);
+            SaveChanges();
             return new User();
         }
     }
