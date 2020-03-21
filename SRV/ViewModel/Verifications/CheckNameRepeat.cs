@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Entity;
+using ProdService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +13,8 @@ namespace ViewModel.Verifications
     {
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
-            if (value.ToString()=="陈百万")
+            UserService userService = new UserService();
+            if (userService.IsGetUser(value.ToString()))
             {
                 var errorMessage = FormatErrorMessage(validationContext.DisplayName);
                 return new ValidationResult(ErrorMessage);

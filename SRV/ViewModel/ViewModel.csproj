@@ -72,5 +72,15 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BLL\Entity\Entity.csproj">
+      <Project>{11C156A7-5089-4C37-8F50-088668AEC91D}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProdService\ProdService.csproj">
+      <Project>{D7F510AC-8427-4643-9F89-9CEAD3A40378}</Project>
+      <Name>ProdService</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

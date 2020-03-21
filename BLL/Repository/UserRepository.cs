@@ -15,7 +15,13 @@ namespace Repository
         public DbSet<User> Users { get; set; }
         public UserRepository() : base("YuanZhan")
         {
+
         }
+        public User GetUser(string name)
+        {
+         return  Users.Where(u => u.Name == name).SingleOrDefault();
+        }
+
         public User Save(User user)
         {
             //user.publish();如果User有直接的方法要调用执行一下

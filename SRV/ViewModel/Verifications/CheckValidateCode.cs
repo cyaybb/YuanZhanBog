@@ -13,7 +13,7 @@ namespace ViewModel.Verifications
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             string code = HttpContext.Current.Session["ValidationCodeString"].ToString();
-            if (value.ToString().ToLower()!=code.ToLower())
+            if (value==null||value.ToString().ToLower()!=code.ToLower())
             {
                 var errorMessage = FormatErrorMessage(validationContext.DisplayName);
                 return new ValidationResult(errorMessage);

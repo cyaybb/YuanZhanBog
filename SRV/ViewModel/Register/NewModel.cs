@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProdService;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ViewModel.Register
 {
     public class NewModel
     {
-        [Required(ErrorMessage = "*邀请人不能为空")]
+       [Required(ErrorMessage = "*邀请人不能为空")]
         public string Inviter { get; set; }
 
         [Required(ErrorMessage = "*邀请码不能为空")]
@@ -37,5 +38,6 @@ namespace ViewModel.Register
         [CheckValidateCode(ErrorMessage = "*验证码错误")]
         [Remote("AfterEndValidationCode", "Register",ErrorMessage ="*验证码错误",HttpMethod ="Get")]
         public string VerificationCode { get; set; }
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProdService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,9 +11,16 @@ namespace UI.Controllers
 {
     public class RegisterController : Controller
     {
+        private UserService _userService;
+        public RegisterController()
+        {
+            _userService = new UserService();
+        }
+
         [HttpGet]
         public ActionResult New()
         {
+
             return View();
         }
 
@@ -25,6 +33,7 @@ namespace UI.Controllers
             }
             //服务器端的验证用户名重复还是伪代码没有写完
             //把用户的信息存储到数据库中=》调用service层 的RegisterServie的save方法
+
 
             return View();
         }
@@ -43,10 +52,10 @@ namespace UI.Controllers
             string code=HttpContext.Session["ValidationCodeString"].ToString().ToLower();
             return Json(VerificationCode.ToLower() == code,JsonRequestBehavior.AllowGet);
         }
-        //前台Ajax验证 用户名重复------------
+        //前台Ajax验证 用户名重复
         public ActionResult CheckNameRepeat(string UserName)
         {
-            return Json(UserName!="陈百万" , JsonRequestBehavior.AllowGet);
+            return Json(!_userService.IsGetUser(UserName), JsonRequestBehavior.AllowGet);
         }
     }
 }
