@@ -53,21 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\202003200347142_User.cs" />
-    <Compile Include="Migrations\202003200347142_User.designer.cs">
-      <DependentUpon>202003200347142_User.cs</DependentUpon>
+    <Compile Include="Migrations\202003201218484_InitialCreate.cs" />
+    <Compile Include="Migrations\202003201218484_InitialCreate.designer.cs">
+      <DependentUpon>202003201218484_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202003200734077_Add_requied_constraint.cs" />
-    <Compile Include="Migrations\202003200734077_Add_requied_constraint.designer.cs">
-      <DependentUpon>202003200734077_Add_requied_constraint.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003200745112_annotation.cs" />
-    <Compile Include="Migrations\202003200745112_annotation.designer.cs">
-      <DependentUpon>202003200745112_annotation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202003200939399_UserInviteCodeAddUnique.cs" />
-    <Compile Include="Migrations\202003200939399_UserInviteCodeAddUnique.designer.cs">
-      <DependentUpon>202003200939399_UserInviteCodeAddUnique.cs</DependentUpon>
+    <Compile Include="Migrations\202003201313081_init.cs" />
+    <Compile Include="Migrations\202003201313081_init.designer.cs">
+      <DependentUpon>202003201313081_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UserRepository.cs" />
@@ -84,17 +76,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202003200347142_User.resx">
-      <DependentUpon>202003200347142_User.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003201218484_InitialCreate.resx">
+      <DependentUpon>202003201218484_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003200734077_Add_requied_constraint.resx">
-      <DependentUpon>202003200734077_Add_requied_constraint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003200745112_annotation.resx">
-      <DependentUpon>202003200745112_annotation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202003200939399_UserInviteCodeAddUnique.resx">
-      <DependentUpon>202003200939399_UserInviteCodeAddUnique.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202003201313081_init.resx">
+      <DependentUpon>202003201313081_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -10,6 +10,7 @@
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "Repository.UserRepository";
         }
 
         protected override void Seed(Repository.UserRepository context)
